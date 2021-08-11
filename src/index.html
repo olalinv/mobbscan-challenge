@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <base href="/">
+  <title>Mobbscan challenge</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="header">
+      <div class="wrapper">
+        <h1>Mobbscan Challenge</h1>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrapper">
+        <div class="grid-container image-detector-component">
+          <div class="mobbscan-upload-form">
+            <form method="post" enctype="multipart/form-data" id="mobbscan-upload-form">
+              <div class="control">
+                <label for="document-type">Document type</label>
+                <select name="documentType" id="document-type" required>
+                  <option value="">--Please choose an option--</option>
+                  <option value="ESP">ESP</option>
+                </select>
+              </div>
+              <div class="control">
+                <label for="document-side">Document side</label>
+                <select name="documentSide" id="document-side" required>
+                  <option value="">--Please choose an option--</option>
+                  <option value="0">Front</option>
+                  <option value="1">Back</option>
+                </select>
+              </div>
+              <div class="control grid-container">
+                <div>
+                  <label for="image">Choose file to upload</label>
+                  <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+                <div>
+                  <label for="capture">Or capture an image</label>
+                  <div>
+                    <button type="button" id="mobbscan-capture-start-button" class="button">Capture</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="button">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="mobbscan-upload-result">
+            <div hidden id="mobbscan-upload-preview">
+              <div class="grid-container">
+                <div class="camera">
+                  <video class="responsive-media" id="mobbscan-capture-video">Video stream not available.</video>
+                  <button type="button" class="button w100" id="mobbscan-capture-take-photo-button">Take photo</button>
+                </div>
+                <canvas class="responsive-media" id="mobbscan-capture-canvas"></canvas>
+              </div>
+            </div>
+            <div hidden id="mobbscan-upload-ok">
+              <img id="mobbscan-upload-image" width="320">
+              <p class="success-color">Success!, the image contains a valid document</p>
+            </div>
+            <div hidden id="mobbscan-upload-error">
+              <p class="error-color">Sorry, the image does not contain a document</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.ts"></script>
+</body>
+
+</html>

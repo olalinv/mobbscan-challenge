@@ -1,0 +1,21 @@
+{
+  "name": "mobbscan-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "start": "parcel src/index.html",
+    "build-prod": "parcel build src/index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "parcel-bundler": "^1.12.5",
+    "postcss-modules": "^4.2.2",
+    "typescript": "^4.3.5"
+  }
+}
