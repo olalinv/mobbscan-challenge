@@ -25,14 +25,14 @@
                 <label for="document-type">Document type</label>
                 <select name="documentType" id="document-type" required="">
                   <option value="">--Please choose an option--</option>
-                  <option value="ESP">ESP</option>
+                  <option value="ESP" selected="">ESP</option>
                 </select>
               </div>
               <div class="control">
                 <label for="document-side">Document side</label>
                 <select name="documentSide" id="document-side" required="">
                   <option value="">--Please choose an option--</option>
-                  <option value="0">Front</option>
+                  <option value="0" selected="">Front</option>
                   <option value="1">Back</option>
                 </select>
               </div>
@@ -59,6 +59,7 @@
                 <div class="camera">
                   <video class="responsive-media" id="mobbscan-capture-video">Video stream not available.</video>
                   <button type="button" class="button w100" id="mobbscan-capture-take-photo-button">Take photo</button>
+                  <button type="button" class="button w100" id="mobbscan-capture-scan-mode-button">Scan mode</button>
                 </div>
                 <canvas class="responsive-media" id="mobbscan-capture-canvas"></canvas>
               </div>

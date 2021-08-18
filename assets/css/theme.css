@@ -31,6 +31,7 @@ img {
   border-radius: 3px;
   color: var(--white-color);
   cursor: pointer;
+  margin: 0.2rem 0;
   padding: 0.5rem 3rem;
 }
 
@@ -75,6 +76,7 @@ img {
 .mobbscan-upload-result img {
   border: 10px solid var(--blue-color);
   border-radius: 10px;
+  margin: 0.25rem 0;
 }
 
 .responsive-media {
